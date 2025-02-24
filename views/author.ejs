@@ -1,1 +1,209 @@
-<div>Hello World you are in Authors</div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/main.css">
+        <link 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
+        rel="stylesheet"
+        />
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <title>Portfolio</title>
+      </head>
+
+<body>
+     <div class="frame">
+        <div class="main_frame">
+            <div class="left_frame">
+                <div class="left_1">
+                    <div class="left_1-1">
+                        <img src="images/profile.png" width="156px" height="142px" >
+                    </div>
+                    <div class="left_1-2"><%=user.name%></div>
+                    <div class="left_1-3"><%=user.profession%></div>
+                    <div class="left_icons">
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/dribbble.svg" class="icon-1"/>
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/facebook.svg" class="icon-1"/>
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/instagram.svg" class="icon-1"/>
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/linkedin.svg" class="icon-1"/>
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/twitter.svg" class="icon-1"/>
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/youtube.svg" class="icon-1"/>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="info">                 
+                  <div class="info">
+                    <div class="info-row">
+                        <span class="label">Age:</span>
+                        <div class="left_2-1"><%=user.age%></div>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Residence:</span>
+                        <div class="left_2-2"><%=user.residence%></div>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">City:</span> 
+                        <div class="left_2-3"><%=user.city%></div>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Address:</span> 
+                        <div class="left_2-4"><%=user.adress%></div>
+                    </div>
+                </div>
+                
+                </div>
+                <div class="marginer"></div>
+                <div class="left_3">
+                    <h2 class="lang">Languages</h2>
+                    <div class="languages">
+                        
+                        <% let languages = [
+                            { name: "Uzbek", percent: 80 },
+                            { name: "English", percent: 70 },
+                            { name: "Russian", percent: 60 }
+                        ]; %>
+                    
+                        <% languages.forEach(lang => { %>
+                            <div class="language-item">
+                                <span class="language-name"><%= lang.name %></span>
+                                <div class="language-percent"><%= lang.percent %>%</div>
+                                
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_4">
+                    <h2>Skills</h2>
+                    <div class="skills">
+                        <% let skills = [
+                            { name: "HTML", percent: 90 },
+                            { name: "CSS", percent: 85 },
+                            { name: "JavaScript", percent: 80 },
+                            { name: "PHP", percent: 75 },
+                            { name: "WordPress", percent: 85 }
+                        ]; %>
+                    
+                        <% skills.forEach(skill => { %>
+                            <div class="skill-item">
+                                <span class="skill-name"><%= skill.name %></span>
+                                <span class="skill-percent"><%= skill.percent %>%</span>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </section>
+        
+                <div class="marginer"></div>
+                <div class="left_5">
+                    <div class="extra_skills"> 
+                        <h2>Extra Skills</h2>
+                    </div>                   
+                    <div class="skills_container">
+                        <% extra_skills = ["Bootstrap, Materialize", "Styling, Sass", "Django, Flask", "GIT Knowledge"]; %>
+                    </div>
+                    <div>
+                        <% extra_skills.forEach(skill => { %>
+                            <div class="skill-item">
+                                <img src="icon/iconcha.png" class="iconcha1"/>
+                                <span class="skill-text"><%= skill %></span>
+                            </div>
+                        <% }) %>
+                    </div>    
+                    
+                </div>
+                <div class="marginer"></div>
+            </div>
+
+            
+            
+            <div class="mid_frame">
+                <div class="top">
+                    <div class="don2"> <img src="icon/dumaloqs.png"></div>
+                    <div class="don"> <img src="icon/doncha4.svg"></div>
+                    <h1 class="sarlavha">Student in MIT</h1>
+                    <div class="hire"> <img src="icon/hireme.png" alt=""></div>
+                    <img src="icon/rasm.png" class="rasm" >
+                    <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> 
+                        Ut, animi ea. Quasi qui est corrupti? Necessitatibus quasi <br>
+                        facilis facere adipisci id commodi! Dolor repellendus <br>
+                        optio similique veritatis molestiae voluptas fugit?</p>
+
+                    
+                </div>
+                <div class="pasi">
+                    <div class="bosh" >
+                        <h1 class="mservis">My Services</h1>
+                        <p class="mservisp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, <br>
+                            explicabo! Veniam quod consequuntur corrupti rem libero <br>
+                                   possimus ab? Nemo vel ullam perferendis <br>
+                                      recusandae voluptas debitis!</p>
+                    </div>
+                    <div class="pastlar">
+                     <div class="past"><img src="icon/past1.svg" class="rasmlari"> <h3>Web Development</h3>
+                        <div class="pasyoz"> Blog, e-commerce</div>
+                    </div>
+                     <div class="past"><img src="icon/past2.png" class="rasmlari"> <h3>UI/UX Design</h3>
+                        <div class="pasyoz"> Mobile App, Website Design</div>
+                    </div>
+                     <div class="past"><img src="icon/past3.png"class="rasmlari"> <h3>Sound Design</h3>
+                        <div class="pasyoz"> Voice Over, Beat Making</div>
+                     </div>
+                     <div class="past"><img src="icon/past4.png"class="rasmlari" ><h3>Game Design</h3>
+                        <div class="pasyoz"> Game Design, Props & Objects</div>
+                    </div>
+                     <div class="past"><img src="icon/past5.png" class="rasmlari"><h3>Photography</h3>
+                        <div class="pasyoz"> Portrait, Product Photography</div>
+                    </div>
+                     <div class="past"> <h3>Advertising</h3>
+                     <div class="pasyoz">  Lorem ipsum dolor sit amet <br>
+                         consectetur  adipisicing elit. Dolore,<br>
+                          neque itaque nulla <br>
+                          assumenda natus.
+                         </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="right_frame">
+                <div class="righticons">
+                    <div class="righticon"> <img src="icon/uy.svg"></div>
+                    <div class="righticon"> <img src="icon/right2.svg"></div>
+                    <div class="righticon"> <img src="icon/right3.svg"></div>
+                    <div class="righticon"> <img src="icon/right4.svg"></div>
+                    <div class="righticon"> <img src="icon/right5.svg"></div>
+                    <div class="righticon"> <img src="icon/right6.svg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
