@@ -29,7 +29,7 @@ const list = [
     } ); 
     console.log("passed here1");*/
 
-    function maslahatBering(a, callback) {
+    async function maslahatBering(a, callback) {
         if(typeof a !== 'number') throw new Error("insert a number") ;
         else if (a <= 20) return (null, list[0]);
         else if (a > 20 && a <= 30) return(null, list[1]);
@@ -37,12 +37,35 @@ const list = [
         else if (a > 40 && a <= 50) return(null, list[3]);
         else if (a > 50 && a <= 60) return(null, list[4]);
         else{
-            return list[5];
+            return new Promise((resolve, reject)  => {
+                setTimeout(() =>{
+                    resolve(list[5]);
+                }, 1000);
+
+            });
            // setTimeout(function() {
            // return list[5];
            // },5000);
         }
     }
+    //then & catch
+    /*console.log("passed here 0");
+    maslahatBering(25)
+        .then(data => {
+        console.log('javob:', data);
+        })
+        .catch((err) => {
+            console.log("ERROR:", err);
+        });
+        console.log("passed here 1");
+    */
 
-    console.log("passed here 0");
-    maslahatBering(10, 25);
+    async function run() {
+        let javob = await maslahatBering(20);
+        console.log(javob);
+        javob = await maslahatBering(30);
+        console.log(javob);
+        javob = await maslahatBering (41);
+        console.log( javob);
+    }
+    run();
