@@ -80,47 +80,90 @@
                 </div>
                 <div class="marginer"></div>
                 <div class="left_3">
-                    <h2 class="lang">Languages</h2>
-                    <div class="languages">
-                        
-                        <% let languages = [
-                            { name: "Uzbek", percent: 80 },
-                            { name: "English", percent: 70 },
-                            { name: "Russian", percent: 60 }
-                        ]; %>
                     
-                        <% languages.forEach(lang => { %>
-                            <div class="language-item">
-                                <span class="language-name"><%= lang.name %></span>
-                                <div class="language-percent"><%= lang.percent %>%</div>
-                                
+                    <div class="container">
+                        
+                            <!-- Languages Section -->
+                            <div class="languages">
+                              <h3>Languages</h3>
+                              <!-- Display the first language -->
+                              <div class="language-item">
+                                <span class="language-name"><%= user.languages[0]%></span>
+                                <div class="chiz"> <img src="icon.sariqchiz.png" alt=""></div>
+                                <div class="progress-bar">
+                                  <div class="progress-fill" style="width: <%= user.languages[0].percent %>%;"></div>
+                                </div>
+                                <span class="language-percent"><%= user.languages[0].percent %>82%</span>
+                              </div>
+                              <!-- Display the second language -->
+                              <div class="language-item">
+                                <span class="language-name"><%= user.languages[1] %></span>
+                                <div class="progress-bar">
+                                  <div class="progress-fill" style="width: <%= user.languages[1].percent %>%;"></div>
+                                </div>
+                                <span class="language-percent"><%= user.languages[1].percent %>70%</span>
+                              </div>
+                              <!-- Display the third language -->
+                              <div class="language-item">
+                                <span class="language-name"><%= user.languages[2] %></span>
+                                <div class="progress-bar">
+                                  <div class="progress-fill" style="width: <%= user.languages[2].percent %>%;"></div>
+                                </div>
+                                <span class="language-percent"><%= user.languages[2].percent %>70%</span>
+                              </div>
                             </div>
-                        <% }) %>
-                    </div>
-                </div>
+                            <div class="container">
+                            <!-- Skills Section -->
+                            <div class="skills">
+                              <h3>Skills</h3>
+                              <!-- Display the first skill -->
+                              <div class="skill-item">
+                                <span class="skill-name"><%= user.skills[0]%></span>
+                                <div class="progress-bar">
+                                  <div class="progress-fill" style="width: <%= user.skills[0].percent %>%;"></div>
+                                </div>
+                                <span class="skill-percent"><%= user.skills[0].percent %>%</span>
+                              </div>
+                              <!-- Display the second skill -->
+                              <div class="skill-item">
+                                <span class="skill-name"><%= user.skills[1]%></span>
+                                <div class="progress-bar">
+                                  <div class="progress-fill" style="width: <%= user.skills[1].percent %>%;"></div>
+                                </div>
+                                <span class="skill-percent"><%= user.skills[1].percent %>%</span>
+                              </div>
+                              <!-- Display the third skill -->
+                              <div class="skill-item">
+                                <span class="skill-name"><%= user.skills[2]%></span>
+                                <div class="progress-bar">
+                                  <div class="progress-fill" style="width: <%= user.skills[2].percent %>%;"></div>
+                                </div>
+                                <span class="skill-percent"><%= user.skills[2].percent %>%</span>
+                              </div>
+                              <div class="skill-item">
+                                <span class="skill-name"><%= user.skills[3]%></span>
+                                <div class="progress-bar">
+                                  <div class="progress-fill" style="width: <%= user.skills[2].percent %>%;"></div>
+                                </div>
+                                <span class="skill-percent"><%= user.skills[3].percent %>%</span>
+                              </div>
+                            </div>
+                          </div>
+                        
+
+                      </div>
+            </div>
+
                 <div class="marginer"></div>
                 <div class="left_4">
-                    <h2>Skills</h2>
-                    <div class="skills">
-                        <% let skills = [
-                            { name: "HTML", percent: 90 },
-                            { name: "CSS", percent: 85 },
-                            { name: "JavaScript", percent: 80 },
-                            { name: "PHP", percent: 75 },
-                            { name: "WordPress", percent: 85 }
-                        ]; %>
                     
-                        <% skills.forEach(skill => { %>
-                            <div class="skill-item">
-                                <span class="skill-name"><%= skill.name %></span>
-                                <span class="skill-percent"><%= skill.percent %>%</span>
-                            </div>
-                        <% }) %>
-                    </div>
-                </div>
-            </section>
+                    <!-- Skills Section -->
+                       
+                </div>    
         
                 <div class="marginer"></div>
+
+
                 <div class="left_5">
                     <div class="extra_skills"> 
                         <h2>Extra Skills</h2>
