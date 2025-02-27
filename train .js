@@ -1,6 +1,6 @@
 //console.log('train task ishga tushdi');
 console.log ('Jack Ma maslahtlari');
-/*const list = [
+const list = [
     "yahshi talaba boling", // 0-20
     "togri boshliq tanlang va koproq hato qiling", // 20-30
     "uzingizga ishlashingizni boshlang", // 30-40
@@ -29,7 +29,7 @@ console.log ('Jack Ma maslahtlari');
     } ); 
     console.log("passed here1");*/
 
-    /*async function maslahatBering(a, callback) {
+    async function maslahatBering(a, callback) {
         if(typeof a !== 'number') throw new Error("insert a number") ;
         else if (a <= 20) return (null, list[0]);
         else if (a > 20 && a <= 30) return(null, list[1]);
@@ -60,7 +60,7 @@ console.log ('Jack Ma maslahtlari');
         console.log("passed here 1");
     */
 
-    /*async function run() {
+    async function run() {
         let javob = await maslahatBering(20);
         console.log(javob);
         javob = await maslahatBering(30);
@@ -68,8 +68,4 @@ console.log ('Jack Ma maslahtlari');
         javob = await maslahatBering (41);
         console.log( javob);
     }
-    run();*/
-
-    
-
- 
+    run();
