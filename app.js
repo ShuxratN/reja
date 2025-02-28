@@ -3,15 +3,16 @@ const express = require("express");
 const app = express();
 
 const fs = require("fs");
-
-let user;
+ 
+let user = JSON.parse(fs.readFileSync("database/user.json", "utf8"));
+/*let user;
 fs.readFile("database/user.json", "utf8", (err, data) => {
     if(err) {
         console.log("ERROR:", err);
     } else {
         user = JSON.parse(data)
     }
-});
+});*/
 
 //Mongo DB connect/ chaqirish
 const db = require("./server").db();
@@ -45,6 +46,9 @@ app.get("/author", (req, res) => {
 });  
 
 app.get("/", function (req, res) {
+    if (!db) {
+        return res.status(500).send("Database not connected");
+    }
     db.collection("plans")
     .find()
     .toArray((err, data) => {
@@ -56,7 +60,7 @@ app.get("/", function (req, res) {
             res.render("reja");
         }
     }) 
-   res.render("reja");
+   
 }); 
 
 module.exports = app;

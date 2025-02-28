@@ -1,8 +1,8 @@
 const http = require("http");
 const mongodb = require("mongodb");
 
-let db ;
-const connectionString = "mongodb+srv://turonnsh:aAI5gCrGTolb3Ybn@cluster0.icqrk.mongodb.net/"
+
+const connectionString = "mongodb+srv://Alex:JoN5dNUICcdLMuGy@alex.oriby.mongodb.net/"
 
 
 mongodb.connect(connectionString,
@@ -15,7 +15,7 @@ mongodb.connect(connectionString,
     else {
         console.log("mongoDB connection succeed");
         module.exports = client;
-        
+
         const app = require("./app");
         const server = http.createServer(app);
         let PORT = 3000;

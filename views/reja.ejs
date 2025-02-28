@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reja</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    
+
 </head>
 <body style="background-color: aqua;">
     <div class="container">
@@ -16,7 +18,7 @@
                 <div class="d-flex align-items-center">
                     <input 
                      id="create-field"
-                     name="item"
+                     name="reja"
                      autofocus
                      autocomplete="off"
                      class="form-control mr-3"
@@ -29,6 +31,24 @@
                 </div>
             </form>
         </div>
+        
+        
+
+        <ul id="list-group" class="list-group pb-5">
+            <li
+            class="list-group-item list-group-item-info d-flex align-items-center justify-content-between"
+            >
+             <span class="item-text"></span>
+             <div>
+               <button class="edit-me btn btn-secondary btn-sm mr-1">
+                  Ozgartirish
+                </button>
+                <button class="delete-me btn btn-danger btn-sm">0chirish</button>
+              </div>
+             </li>
+            </ul>
+
+
 
         <button id="clean-all" class="btn btn-danger" style="border-radius: 20px;">
             Hamma Rejalarni O'chirish
