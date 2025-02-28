@@ -1,0 +1,27 @@
+{
+  "type": "Compass Connections",
+  "version": {
+    "$numberInt": "1"
+  },
+  "connections": [
+    {
+      "id": "08d31363-dac6-491e-b300-29d1bd959741",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1740565630148"
+        }
+      },
+      "favorite": {
+        "name": "MongoAtlasAlex",
+        "color": "color1"
+      },
+      "savedConnectionType": "favorite",
+      "connectionOptions": {
+        "connectionString": "mongodb+srv://turonnsh:aAI5gCrGTolb3Ybn@cluster0.icqrk.mongodb.net/",
+        "oidc": {
+          "serializedState": "eyJvaWRjUGx1Z2luU3RhdGVWZXJzaW9uIjowLCJzdGF0ZSI6W119"
+        }
+      }
+    }
+  ]
+}
