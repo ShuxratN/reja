@@ -38,5 +38,5 @@ app.get("/", function (req, res) {
    res.render("reja");
 }); 
 
-module.exports = app;
+//module.exports = app;
 
