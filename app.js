@@ -4,15 +4,15 @@ const app = express();
 
 const fs = require("fs");
  
-let user = JSON.parse(fs.readFileSync("database/user.json", "utf8"));
-/*let user;
+//let user = JSON.parse(fs.readFileSync("database/user.json", "utf8"));
+let user;
 fs.readFile("database/user.json", "utf8", (err, data) => {
     if(err) {
         console.log("ERROR:", err);
     } else {
         user = JSON.parse(data)
     }
-});*/
+});
 
 //Mongo DB connect/ chaqirish
 const db = require("./server").db();
@@ -46,9 +46,7 @@ app.get("/author", (req, res) => {
 });  
 
 app.get("/", function (req, res) {
-    if (!db) {
-        return res.status(500).send("Database not connected");
-    }
+    console.log("user entered /,");
     db.collection("plans")
     .find()
     .toArray((err, data) => {
@@ -57,11 +55,11 @@ app.get("/", function (req, res) {
             res.end("something went wrong");
         } else {
             console.log(data);
-            res.render("reja");
+            res.render("reja", { items: data });
         }
-    }) 
+    }); 
    
-}); 
+});  
 
 module.exports = app;
 
