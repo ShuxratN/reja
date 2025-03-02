@@ -25,7 +25,7 @@ app.use(express.urlencoded({extended: true}));
 
 //2 Session CODE
 //3  VIEWS CODE
-app.set("views", "views");
+app.set("views", "views"); 
 app.set("view engine","ejs");
 
 //4 ROUTING CODE
@@ -61,5 +61,5 @@ app.get("/", function (req, res) {
    
 });  
 
-module.exports = app;
+module.exports = app; 
 
