@@ -1,5 +1,50 @@
-//console.log('train task ishga tushdi');
-console.log ('Jack Ma maslahtlari');
+console.log('train task ishga tushdi');
+
+/*C-TASK: 
+
+Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;*/
+
+
+ class StringCheck {
+    constructor(string1,  string2) {
+        this.string1 = this.string2;
+    }
+    
+    sameLetter (){
+        if (this.string1.lenght !== this.string2.lenght) return false;
+    }
+ }
+console.log( sameLetter("hello", "hello"));
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*console.log ('Jack Ma maslahtlari');
 const list = [
     "yahshi talaba boling", // 0-20
     "togri boshliq tanlang va koproq hato qiling", // 20-30
@@ -29,7 +74,7 @@ const list = [
     } ); 
     console.log("passed here1");*/
 
-    async function maslahatBering(a, callback) {
+    /*async function maslahatBering(a, callback) {
         if(typeof a !== 'number') throw new Error("insert a number") ;
         else if (a <= 20) return (null, list[0]);
         else if (a > 20 && a <= 30) return(null, list[1]);
@@ -60,7 +105,7 @@ const list = [
         console.log("passed here 1");
     */
 
-    async function run() {
+    /*async function run() {
         let javob = await maslahatBering(20);
         console.log(javob);
         javob = await maslahatBering(30);
@@ -69,3 +114,4 @@ const list = [
         console.log( javob);
     }
     run();
+*/  

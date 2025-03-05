@@ -1,5 +1,7 @@
 //const { response } = require("../app");
 
+
+
 console.log("FrontEnd JS ishga tushdi");
 
 function itemTemplate(item) {
@@ -28,18 +30,20 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     .then((response) => {
         document
         .getElementById("item-list")
-        .insertAdjacentHTML("beforeend", itemTemplate(response.data))
+        .insertAdjacentHTML("beforeend", itemTemplate(response.data));
         createField.value = "";
         createField.focus();
     })
     .catch((err) => {
         console.log("Iltimos qaytadan harakat qiling!");
+        console.log(err);
     });
 });
 
 document.addEventListener("click", function (e) {
 
     //delete oper
+    console.log(e.target);
     if(e.target.classList.contains("delete-me"))  {
         if(confirm("Aniq bosmoqchimisiz")) {
             axios
@@ -56,7 +60,32 @@ document.addEventListener("click", function (e) {
 
     //edit oper
     if(e.target.classList.contains("edit-me")) {
-        alert("Siz edit tugmasini bosdingiz");
-    }
-    
+        let userInput = prompt(
+            "O'zgartirishni kiriting", 
+            e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+        );
+        if (userInput) {
+            axios
+            .post("/edit-item", {
+                id: e.target.getAttribute("data-id"),
+                new_input: userInput,
+            })
+            .then((response) => {
+                console.log(response.data);
+                e.target.parentElement.parentElement.querySelector(
+                   ".item-text" 
+                ).innerHTML = userInput;
+            })
+            .catch((err) => {
+                console.log("Iltimos qaytadan harakat qiling!");
+            });
+        }
+    }  
+});
+
+document.getElementById("clean-all").addEventListener("click", function () {
+    axios.post("/delete-all", { delete_all: true }).then(response => {
+        alert(response.data.state);
+        document.location.reload();
+    });
 });
